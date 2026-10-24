@@ -16,7 +16,7 @@ PROVIDERS = [
 ]
 PRIVATE_KEY = re.compile(r"-----BEGIN (?:RSA |EC |DSA |OPENSSH |PGP )?PRIVATE KEY(?: BLOCK)?-----")
 _PROV = [(n, re.compile(r)) for n, r in PROVIDERS]
-_ASSIGN = re.compile(r"""["']?(?P<name>[A-Za-z_][\w.\-]{1,60})["']?\s*(?:=>|=|:)\s*["']?(?P<val>[^\s"',;)\]}]{8,200})["']?""")
+_ASSIGN = re.compile(r"""["']?(?P<name>[A-Za-z_][\w.\-]{1,60})["']?\s*(?:=>|:=|=|:)\s*["']?(?P<val>[^\s"',;)\]}]{8,200})["']?""")
 _QUOTED = re.compile(r"""["'](?P<val>[A-Za-z0-9+/=_\-.]{20,200})["']""")
 SECRETISH = re.compile(r"(key|secret|token|passw|pwd|auth|cred|api|private|bearer|signature)", re.I)
 
