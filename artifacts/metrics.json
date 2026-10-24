@@ -1,0 +1,100 @@
+{
+  "selected": "hist_gbm",
+  "models": {
+    "logreg": {
+      "threshold": 0.5199999999999999,
+      "val_pr_auc": 0.997474711864782,
+      "test_seen": {
+        "precision": 0.9764705882352941,
+        "recall": 0.9822485207100592,
+        "f1": 0.9793510324483776,
+        "roc_auc": 0.9985380319554342,
+        "pr_auc": 0.998118463312139,
+        "confusion": {
+          "tn": 419,
+          "fp": 8,
+          "fn": 6,
+          "tp": 332
+        }
+      },
+      "test_unseen_formats": {
+        "precision": 0.9626168224299065,
+        "recall": 0.6666666666666666,
+        "f1": 0.7877629063097514,
+        "roc_auc": 0.954638619201726,
+        "pr_auc": 0.9345803032615938,
+        "confusion": {
+          "tn": 472,
+          "fp": 8,
+          "fn": 103,
+          "tp": 206
+        }
+      },
+      "fit_seconds": 0.3
+    },
+    "hist_gbm": {
+      "threshold": 0.71,
+      "val_pr_auc": 0.9993072878792791,
+      "test_seen": {
+        "precision": 0.9911504424778761,
+        "recall": 0.9940828402366864,
+        "f1": 0.9926144756277696,
+        "roc_auc": 0.9996258470407272,
+        "pr_auc": 0.999527547964236,
+        "confusion": {
+          "tn": 424,
+          "fp": 3,
+          "fn": 2,
+          "tp": 336
+        }
+      },
+      "test_unseen_formats": {
+        "precision": 0.9779005524861878,
+        "recall": 0.5728155339805825,
+        "f1": 0.7224489795918367,
+        "roc_auc": 0.9769350053937433,
+        "pr_auc": 0.9629429550813977,
+        "confusion": {
+          "tn": 476,
+          "fp": 4,
+          "fn": 132,
+          "tp": 177
+        }
+      },
+      "fit_seconds": 5.1
+    },
+    "mlp": {
+      "threshold": 0.7899999999999999,
+      "val_pr_auc": 0.9982285105125357,
+      "test_seen": {
+        "precision": 0.9851190476190477,
+        "recall": 0.9792899408284024,
+        "f1": 0.9821958456973294,
+        "roc_auc": 0.999050760084808,
+        "pr_auc": 0.9987616909160946,
+        "confusion": {
+          "tn": 422,
+          "fp": 5,
+          "fn": 7,
+          "tp": 331
+        }
+      },
+      "test_unseen_formats": {
+        "precision": 0.9779005524861878,
+        "recall": 0.5728155339805825,
+        "f1": 0.7224489795918367,
+        "roc_auc": 0.9703411542610572,
+        "pr_auc": 0.9561042707461369,
+        "confusion": {
+          "tn": 476,
+          "fp": 4,
+          "fn": 132,
+          "tp": 177
+        }
+      },
+      "fit_seconds": 1.2
+    }
+  },
+  "n_train": 2332,
+  "note": "Secrets are synthetic; negatives are real code from site-packages."
+}

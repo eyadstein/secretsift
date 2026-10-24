@@ -1,0 +1,54 @@
+{
+  "pattern-rules-only": {
+    "precision": 0.7206349206349206,
+    "recall": 0.4699792960662526,
+    "f1": 0.568922305764411,
+    "recall_unseen_formats": 0.0,
+    "false_alerts_on_real_code_per_100k_loc": 0.0,
+    "false_alerts_on_planted_decoys": 88,
+    "tp": 227,
+    "fp": 88,
+    "fn": 256,
+    "seconds": 1.0
+  },
+  "rules+entropy (no ML)": {
+    "precision": 0.4324586977648202,
+    "recall": 0.9213250517598344,
+    "f1": 0.5886243386243386,
+    "recall_unseen_formats": 0.9,
+    "false_alerts_on_real_code_per_100k_loc": 470.3,
+    "false_alerts_on_planted_decoys": 327,
+    "tp": 445,
+    "fp": 584,
+    "fn": 38,
+    "seconds": 0.7
+  },
+  "SecretSift (ML filter)": {
+    "precision": 0.9896640826873385,
+    "recall": 0.7929606625258799,
+    "f1": 0.8804597701149426,
+    "recall_unseen_formats": 0.5153846153846153,
+    "false_alerts_on_real_code_per_100k_loc": 1.8,
+    "false_alerts_on_planted_decoys": 3,
+    "tp": 383,
+    "fp": 4,
+    "fn": 100,
+    "seconds": 3.3
+  },
+  "detect-secrets (default)": {
+    "precision": 0.6374695863746959,
+    "recall": 0.5424430641821946,
+    "f1": 0.5861297539149888,
+    "recall_unseen_formats": 0.49230769230769234,
+    "false_alerts_on_real_code_per_100k_loc": 1.8,
+    "false_alerts_on_planted_decoys": 148,
+    "tp": 262,
+    "fp": 149,
+    "fn": 221,
+    "seconds": 9.0
+  },
+  "_meta": {
+    "loc": 54645,
+    "planted_positives": 483
+  }
+}

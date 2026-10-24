@@ -1,0 +1,13 @@
+name: SecretSift
+description: Scan for hard-coded secrets and upload SARIF results
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with: {python-version: "3.11"}
+    - shell: bash
+      run: |
+        pip install "${{ github.action_path }}"
+        secretsift scan . --format sarif --out secretsift.sarif --exit-zero
+    - uses: github/codeql-action/upload-sarif@v3
+      with: {sarif_file: secretsift.sarif}

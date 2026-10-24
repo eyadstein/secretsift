@@ -1,0 +1,6 @@
+- id: secretsift
+  name: SecretSift
+  description: Block commits that contain real-looking secrets
+  entry: secretsift scan
+  language: python
+  pass_filenames: true
