@@ -11,12 +11,14 @@ PROVIDERS = [
     ("stripe-key", r"\b[sr]k_(?:live|test)_[A-Za-z0-9]{20,99}\b"),
     ("google-api-key", r"\bAIza[0-9A-Za-z_\-]{35}\b"),
     ("openai-style-key", r"\bsk-(?:proj-|ant-[a-z0-9]+-)?[A-Za-z0-9_\-]{32,}\b"),
+    ("ethereum-private-key", r"\b(?:0x)?[0-9a-fA-F]{64}\b"),
+    ("solana-private-key", r"\b[1-9A-HJ-NP-Za-km-z]{87,88}\b"),
     ("jwt", r"\beyJ[A-Za-z0-9_\-]{8,}\.eyJ[A-Za-z0-9_\-]{8,}\.[A-Za-z0-9_\-]{8,}\b"),
     ("db-url-password", r"\b[a-z][a-z0-9+.\-]*://[^\s:/@\"']+:([^\s@\"']{4,})@[^\s/\"']+"),
 ]
 PRIVATE_KEY = re.compile(r"-----BEGIN (?:RSA |EC |DSA |OPENSSH |PGP )?PRIVATE KEY(?: BLOCK)?-----")
 _PROV = [(n, re.compile(r)) for n, r in PROVIDERS]
-_ASSIGN = re.compile(r"""["']?(?P<name>[A-Za-z_][\w.\-]{1,60})["']?\s*(?:=>|=|:)\s*["']?(?P<val>[^\s"',;)\]}]{8,200})["']?""")
+_ASSIGN = re.compile(r"""["']?(?P<name>[A-Za-z_][\w.\-]{1,60})["']?\s*(?:=>|:=|=|:)\s*["']?(?P<val>[^\s"',;)\]}]{8,200})["']?""")
 _QUOTED = re.compile(r"""["'](?P<val>[A-Za-z0-9+/=_\-.]{20,200})["']""")
 SECRETISH = re.compile(r"(key|secret|token|passw|pwd|auth|cred|api|private|bearer|signature)", re.I)
 
